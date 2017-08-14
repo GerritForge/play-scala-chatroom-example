@@ -3,12 +3,15 @@
 node {
     checkout scm
 
-    stage('Build') {
-        sh sbt('compile')
-    }
+    docker.image('GerritForge/play-sbt-8-jdk-alpine').inside {
 
-    stage('Test') {
-        sh snt('test')
+        stage('Build') {
+            sh sbt('compile')
+        }
+
+        stage('Test') {
+            sh snt('test')
+        }
     }
 }
 
