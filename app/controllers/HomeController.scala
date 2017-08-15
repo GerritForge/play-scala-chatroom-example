@@ -45,6 +45,7 @@ class HomeController @Inject()(cc: ControllerComponents)
   }
 
   def index: Action[AnyContent] = Action { implicit request: RequestHeader =>
+    logger.debug("Sample Debug message")
     val webSocketUrl = routes.HomeController.chat().webSocketURL()
     logger.info(s"index: ")
     Ok(views.html.index(webSocketUrl))
