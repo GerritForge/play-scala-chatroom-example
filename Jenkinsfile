@@ -14,8 +14,9 @@ node {
             }
 
             gerrit.review("Verified", 1, "It works !")
-        } catch (all) {
+        } catch (e) {
             gerrit.review("Verified", -1, "Breaks the build ;-(")
+            throw e
         }
     }
 }
