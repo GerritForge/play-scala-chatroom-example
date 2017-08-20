@@ -19,6 +19,8 @@ node {
             throw e
         }
     }
+
+    logstashSend failBuild: true, maxLines: 1000
 }
 
 def sbt(target) {
