@@ -11,6 +11,9 @@ node {
                 stage('Test') {
                     sh sbt('test')
                 }
+                stage('Publish') {
+                    sh sbt ('publish-local')
+                }
             }
 
             gerrit.review("Verified", 1, "It works !")
