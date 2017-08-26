@@ -1,4 +1,4 @@
-name := """play-chatroom-scala-example"""
+name := """PlayExample"""
 
 version := "2.6.x"
 
