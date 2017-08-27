@@ -16,8 +16,8 @@ import scala.concurrent.{ExecutionContext, Future}
  * A very simple chat client using websockets.
  */
 @Singleton
-class HomeController @Inject()(cc: ControllerComponents)
-                              (implicit actorSystem: ActorSystem,
+class MainHomeController @Inject()(cc: ControllerComponents)
+                                  (implicit actorSystem: ActorSystem,
                                mat: Materializer,
                                executionContext: ExecutionContext) 
                                extends AbstractController(cc) with RequestMarkerContext {
@@ -46,7 +46,7 @@ class HomeController @Inject()(cc: ControllerComponents)
 
   def index: Action[AnyContent] = Action { implicit request: RequestHeader =>
     logger.debug("Sample Debug message")
-    val webSocketUrl = routes.HomeController.chat().webSocketURL()
+    val webSocketUrl = routes.MainHomeController.chat().webSocketURL()
     logger.info(s"index: ")
     Ok(views.html.index(webSocketUrl))
   }
