@@ -14,7 +14,7 @@ import scala.concurrent.duration._
 
 class HomeControllerSpec extends PlaySpec with ScalaFutures with IntegrationPatience {
 
-  "HomeController" should {
+  "HomeController " should {
 
     "reject a websocket flow if the origin is set incorrectly" in WsTestClient.withClient { client =>
 
