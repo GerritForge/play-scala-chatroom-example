@@ -1,0 +1,8 @@
+Verified+1: Jenkins CI <jenkins@gerritforge.com>
+Code-Review+2: Administrator <admin@example.com>
+Verified+1: Administrator <admin@example.com>
+Submitted-by: Administrator <admin@example.com>
+Submitted-at: Mon, 28 Aug 2017 05:11:00 +0000
+Reviewed-on: http://review-pipeline/65
+Project: gerritforge/play-scala-chatroom-example
+Branch: refs/heads/master
