@@ -13,6 +13,8 @@ import scala.concurrent.ExecutionContext
  */
 class ContentSecurityPolicyFilter @Inject()(implicit ec: ExecutionContext) extends EssentialFilter {
 
+  // Typo has been fixed
+
   override def apply(next: EssentialAction): EssentialAction = EssentialAction { request: RequestHeader =>
     val webSocketUrl = routes.MainHomeController.chat().webSocketURL()(request)
     next(request).map { result =>
